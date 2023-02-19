@@ -20,7 +20,6 @@ const App = () => {
   return (
     <div className={classNames('app', {hovered: true, selected: false}, [theme])}>
       <Navbar />
-      <button onClick={toggleTheme}>Поменять тему</button>
       <AppRouter />
     </div>
   )
