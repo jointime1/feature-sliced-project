@@ -12,6 +12,7 @@ import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
+import { Sidebar } from "widgets/SideBar";
 
 
 
@@ -20,7 +21,10 @@ const App = () => {
   return (
     <div className={classNames('app', {hovered: true, selected: false}, [theme])}>
       <Navbar />
-      <AppRouter />
+      <div className="content-page">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   )
 }
