@@ -11,9 +11,14 @@
 }
 
 .switchers {
+    color:red;
     position: absolute;
     bottom: 20px;
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.langs {
+    margin-left: 20px;
 }
