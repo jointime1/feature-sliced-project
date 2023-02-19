@@ -1,5 +1,4 @@
-import { useTheme } from "app/providers/ThemeProvider";
-import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
+import { Theme, useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./ThemeSwitcher.module.scss";
 import Dark from "shared/assets/icons/theme-dark.svg";

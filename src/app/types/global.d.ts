@@ -5,7 +5,7 @@ declare module '*.scss' {
     const classNames: IClassNames;
     export = classNames;
   }
-  
+
 declare module "*.svg" {
     import * as React from "react";
   
@@ -15,3 +15,6 @@ declare module "*.svg" {
   
     export default ReactComponent;
   }  
+
+declare module "*.png";
+declare module "*.jpg";
