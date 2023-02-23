@@ -1,4 +1,4 @@
-import { Suspense, useState, useContext } from 'react';
+import { Suspense } from 'react';
 import './styles/index.scss';
 
 import { classNames } from 'shared/lib/classNames/classNames';
