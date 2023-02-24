@@ -8,10 +8,10 @@ import { Sidebar } from 'widgets/SideBar';
 import { AppRouter } from './providers/router';
 
 const App = () => {
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
     return (
-        <div className={classNames('app', { hovered: true, selected: false }, [theme])}>
-            <Suspense fallback="loading">
+        <div className={classNames('app', {}, [theme])}>
+            <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
