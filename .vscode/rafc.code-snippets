@@ -2,6 +2,7 @@
 	"test": {
 		"prefix": "rafce",
 		"body": [
+			"import { useTranslation } from \"react-i18next\"",
 			"import { classNames } from \"shared/lib/classNames/classNames\";",
 			"import cls from \"./$TM_FILENAME_BASE.module.scss\";",
 			"",
@@ -9,10 +10,12 @@
 			"    className?: string;",
 			"}",
 			"",
-			"export const $TM_FILENAME_BASE = ({className}: ${TM_FILENAME_BASE}Props) => {",
+			"export const $TM_FILENAME_BASE = (props: ${TM_FILENAME_BASE}Props) => {",
+			"const {className} = props;",
+			"const {t} = useTranslation();",
 			"  return (",
 			"    <div className={classNames(cls.$TM_FILENAME_BASE, {}, [className])}>",
-			" ",
+			"",
 			"    </div>",
 			"  )",
 			"}",
