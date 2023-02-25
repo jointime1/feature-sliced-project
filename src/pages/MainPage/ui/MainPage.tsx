@@ -5,7 +5,6 @@ const MainPage = () => {
     const { t } = useTranslation('main');
     return (
         <div>
-            <BugButton />
             {t('Главная страница')}
         </div>
     );
