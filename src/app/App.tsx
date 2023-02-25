@@ -7,21 +7,17 @@ import { Sidebar } from 'widgets/SideBar';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { AppRouter } from './providers/router';
 
-const App = () => {
-    const { theme } = useTheme();
+const App = () => (
+    <div className={classNames('app', {}, [])}>
+        <Suspense fallback="">
+            <Navbar />
 
-    return (
-        <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
-                <Navbar />
-
-                <div className="content-page">
-                    <Sidebar />
-                    <AppRouter />
-                </div>
-            </Suspense>
-        </div>
-    );
-};
+            <div className="content-page">
+                <Sidebar />
+                <AppRouter />
+            </div>
+        </Suspense>
+    </div>
+);
 
 export default App;
