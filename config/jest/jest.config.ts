@@ -190,15 +190,17 @@ export default {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
+    // transform: {
+    //     'node_modules/variables/.+\\.(j|t)sx?$': 'ts-jest',
+    // },
 
     // An array of regexp pattern strings that are matched against all
     // source file paths, matched files will skip transformation
-    // transformIgnorePatterns: [
-    //   "\\\\node_modules\\\\",
-    //   "\\.pnp\\.[^\\\\]+$"
-    // ],
-
+    // TODO: падали тесты из-за аксиоса
+    transformIgnorePatterns:
+        [
+            '//node_modules',
+        ],
     // An array of regexp pattern strings that are matched against
     // all modules before the module loader will automatically return a mock for them
     // unmockedModulePathPatterns: undefined,
