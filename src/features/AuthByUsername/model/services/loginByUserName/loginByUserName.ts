@@ -8,11 +8,6 @@ interface LoginByUserNameProps {
     password: string;
 }
 
-enum LoginErrors {
-    INCORRECT_DATA = '',
-    SERVER_ERROR = '',
-}
-
 // eslint-disable-next-line max-len
 export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, { rejectValue: string }>(
     'login/loginByUserName',
