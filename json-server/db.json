@@ -26,6 +26,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Alex",
+    "lastname": "Testovich",
+    "age": 23,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://yt3.googleusercontent.com/sAi4hVuIBX282_hrbyknOZXNVEivmXJ9OTNdmJIjhZYXR5ELqlW4DDGD1RK2oYG5fowysTrxEjc=s900-c-k-c0x00ffffff-no-rj"
   }
 }
