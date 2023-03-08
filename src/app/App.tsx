@@ -7,13 +7,14 @@ import { Sidebar } from 'widgets/SideBar';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './providers/router';
 
 const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(userActions.initAuthDate);
+        dispatch(userActions.initAuthData());
     }, [dispatch]);
     return (
         <div className={classNames('app', {}, [])}>
