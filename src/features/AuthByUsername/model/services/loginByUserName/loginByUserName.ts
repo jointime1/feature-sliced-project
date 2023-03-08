@@ -12,22 +12,19 @@ interface LoginByUserNameProps {
 // eslint-disable-next-line max-len
 export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps, ThunkConfig<string>>(
     'login/loginByUserName',
-    async ({ username, password }, thunkApi) => {
+    async (authData, thunkApi) => {
         const { extra, dispatch, rejectWithValue } = thunkApi;
         try {
-            const response = await extra.api.post<User>('/login', {
-                username, password,
-            });
+            const response = await extra.api.post<User>('/login', authData);
             if (!response.data) {
-                // throw new Error();
-                console.log('error');
+                throw new Error();
             }
+
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
             dispatch(userActions.setAuthData(response.data));
-            extra.navigate('/about');
             return response.data;
         } catch (e) {
-            console.error(e);
+            console.log(e);
             return rejectWithValue('error');
         }
     },

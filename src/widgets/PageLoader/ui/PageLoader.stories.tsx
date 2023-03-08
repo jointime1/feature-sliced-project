@@ -14,7 +14,7 @@ export default {
 } as ComponentMeta<typeof PageLoader>;
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Template: ComponentStory<typeof PageLoader> = (args) => <PageLoader {...args} />;
+const Template: ComponentStory<typeof PageLoader> = () => <PageLoader />;
 
 export const Light = Template.bind({});
 Light.args = {
