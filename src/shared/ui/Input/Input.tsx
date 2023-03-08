@@ -1,10 +1,10 @@
 import React, {
-    InputHTMLAttributes, memo, useEffect, useRef, useState,
+    InputHTMLAttributes, memo, useEffect, useMemo, useRef, useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 
 interface InputProps extends HTMLInputProps {
     className?: string;
@@ -12,6 +12,7 @@ interface InputProps extends HTMLInputProps {
     // eslint-disable-next-line no-unused-vars
     onChange?: (value: string) => void;
     autofocus?: boolean;
+    readonly?: boolean;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -21,6 +22,7 @@ export const Input = memo((props: InputProps) => {
         onChange,
         type = 'text',
         autofocus,
+        readonly,
         ...otherProps
     } = props;
 
@@ -38,14 +40,20 @@ export const Input = memo((props: InputProps) => {
         }
     }, [autofocus]);
 
+    const mods = useMemo(
+        () => ({ [cls.readonly]: readonly }),
+        [readonly],
+    );
+
     return (
-        <div className={classNames(cls.Input, {}, [className])}>
+        <div className={classNames(cls.Input, mods, [className])}>
             <input
                 ref={ref}
                 className={cls.input}
                 value={value}
                 onChange={onChangeHandler}
                 type={type}
+                readOnly={readonly}
                 {...otherProps}
             />
         </div>

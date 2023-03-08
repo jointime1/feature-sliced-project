@@ -13,7 +13,15 @@ const ProfileSlice = createSlice({
     name: 'profile',
     initialState,
     reducers: {
-
+        setReadOnly: (state, action: PayloadAction<boolean>) => {
+            state.readonly = action.payload;
+        },
+        updateProfile: (state, action: PayloadAction<Profile>) => {
+            state.data = {
+                ...state.data,
+                ...action.payload,
+            };
+        },
     },
     extraReducers: (builder) => {
         builder
