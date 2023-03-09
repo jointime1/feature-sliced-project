@@ -1,4 +1,4 @@
-import { getProfileReadonly, profileActions } from 'entities/Profile';
+import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -24,7 +24,10 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     const onCanselEdit = useCallback(() => {
-        dispatch(profileActions.setReadOnly(true));
+        dispatch(profileActions.cancelEdit());
+    }, [dispatch]);
+    const onSave = useCallback(() => {
+        dispatch(updateProfileData());
     }, [dispatch]);
 
     return (
@@ -41,13 +44,19 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
             ) : (
                 <>
                     <Button
-                        theme={ButtonTheme.OUTLINE}
+                        theme={ButtonTheme.OUTLINE_RED}
                         className={cls.editBtn}
                         onClick={onCanselEdit}
                     >
                         {t('Отменить')}
                     </Button>
-                    123
+                    <Button
+                        theme={ButtonTheme.OUTLINE}
+                        className={cls.saveBtn}
+                        onClick={onSave}
+                    >
+                        {t('Сохранить')}
+                    </Button>
                 </>
             )}
 
