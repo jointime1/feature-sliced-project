@@ -17,6 +17,9 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
+  "exclude": [
+    "**/fttemplates/*"
+  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
@@ -26,5 +29,5 @@
     "./config/jest/setupTests.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
-  ]
+  ],
 }

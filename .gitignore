@@ -6,3 +6,4 @@ storybook-static
 .loki/report.html
 .loki/report.json
 .vscode
+.fttemplates
