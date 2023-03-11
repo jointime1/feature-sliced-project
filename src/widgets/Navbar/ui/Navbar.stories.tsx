@@ -26,6 +26,4 @@ export const Dark = Template.bind({});
 Dark.args = {
 
 };
-
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-Dark.decorators = [StoreDecorator({})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
