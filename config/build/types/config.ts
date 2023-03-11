@@ -13,10 +13,13 @@ export interface BuildEnv {
     apiUrl: string;
 }
 
+type ProjectType = 'storybook' | 'frontend' | 'jest'
+
 export interface BuildOptions {
     mode: BuildMode;
     paths: BuildPaths;
     isDev: boolean;
     port: number;
     apiUrl: string;
+    project: ProjectType;
 }
