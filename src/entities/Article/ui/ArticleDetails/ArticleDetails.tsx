@@ -7,6 +7,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
 import { useSelector } from 'react-redux';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
+import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -40,9 +41,15 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     let content;
 
-    if (isLoading) {
+    if (id) {
         content = (
-            <div>Loading...</div>
+            <div>
+                <Skeleton className={cls.avatar} height={200} width={200} border="50%" />
+                <Skeleton className={cls.title} height={32} width={300} />
+                <Skeleton className={cls.skeleton} height={24} width={600} />
+                <Skeleton className={cls.skeleton} height={200} width="100%" />
+                <Skeleton className={cls.skeleton} height={200} width="100%" />
+            </div>
         );
     } else if (errorData) {
         content = (
