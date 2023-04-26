@@ -3,6 +3,10 @@
 
     // TODO убрать
     margin-left: 10px;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .primary {
