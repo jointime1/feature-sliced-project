@@ -12,6 +12,7 @@ const data = {
     country: Country.RUSSIA,
     city: 'Moscow',
     username: 'admin',
+
 };
 
 describe('profileSlice.test', () => {

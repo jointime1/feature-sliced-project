@@ -18,7 +18,7 @@ import { Icon } from 'shared/ui/Icon/Icon';
 import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
 import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
-import { ArtilceTextBlockComponent } from 'entities/Article/ui/ArtilceTextBlockComponent/ArtilceTextBlockComponent';
+import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     getArticleDetailsData,
@@ -54,7 +54,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             case ArticleBlockType.IMAGE:
                 return <ArticleImageBlockComponent key={block.id} className={cls.block} block={block} />;
             case ArticleBlockType.TEXT:
-                return <ArtilceTextBlockComponent key={block.id} className={cls.block} block={block} />;
+                return <ArticleTextBlockComponent key={block.id} className={cls.block} block={block} />;
             default:
                 return null;
         }

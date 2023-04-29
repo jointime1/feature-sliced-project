@@ -26,6 +26,7 @@ const loginSlice = createSlice({
                 state.error = undefined;
                 state.isLoading = true;
             })
+            // todo wtf
             .addCase(loginByUserName.fulfilled, (state, action) => {
                 state.isLoading = false;
             })

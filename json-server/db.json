@@ -102,6 +102,72 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "id": "4",
+      "text": "some comment 4",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "4MhYDgy",
+      "text": "asdasd",
+      "artilceId": "1",
+      "userId": "1"
+    },
+    {
+      "artilceId": "1",
+      "userId": "1",
+      "text": "123132312",
+      "id": "ehEa4KK"
+    },
+    {
+      "artilceId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "o3_M5Tj"
+    },
+    {
+      "artilceId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "ElnZ-v7"
+    },
+    {
+      "artilceId": "1",
+      "userId": "1",
+      "text": "1",
+      "id": "v30OKJr"
+    },
+    {
+      "artilceId": "1",
+      "userId": "1",
+      "text": "123123123",
+      "id": "CeltdZG"
+    },
+    {
+      "artilceId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "IDIf-gB"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "кк",
+      "id": "U5sTYM6"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "test",
+      "id": "h_E5yeU"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "bcxG3z6"
     }
   ],
   "users": [
@@ -120,14 +186,28 @@
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
-  }
+  "profile": [
+    {
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200",
+      "id": "1"
+    },
+    {
+      "first": "test",
+      "lastname": "testovch",
+      "age": 46,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "tester",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg",
+      "id": "2"
+    }
+  ]
 }
